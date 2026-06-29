@@ -1,0 +1,14 @@
+[project]
+name = "day-15"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "alembic>=1.18.5",
+    "fastapi[standard]>=0.138.1",
+    "psycopg2>=2.9.12",
+    "sqlalchemy>=2.0.51",
+    "sse-starlette>=3.4.5",
+    "websockets>=16.0",
+]

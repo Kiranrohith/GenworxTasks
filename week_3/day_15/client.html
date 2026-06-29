@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Chat</title>
+</head>
+<body>
+
+<h2>FastAPI WebSocket Chat</h2>
+
+<input type="text" id="name" placeholder="Enter your name">
+<input type="text" id="message" placeholder="Type a message">
+<button onclick="sendMessage()">
+    Send
+</button>
+
+<hr>
+
+<div id="chat"></div>
+
+<script>
+
+const websocket = new WebSocket("ws://localhost:8000/ws");
+
+websocket.onopen = function () {
+    console.log("Connected");
+};
+
+websocket.onmessage = function (event) {
+
+    const chat = document.getElementById("chat");
+
+    chat.innerHTML += `<p>${event.data}</p>`;
+};
+
+websocket.onclose = function () {
+    console.log("Disconnected");
+};
+function sendMessage() {
+    const name = document.getElementById("name").value;
+    const input = document.getElementById("message").value;
+
+    websocket.send(`${name} : ${input}`);
+
+    input.value = "";
+}
+
+</script>
+
+</body>
+</html>
