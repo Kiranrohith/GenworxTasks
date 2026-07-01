@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kiran Rohith | Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Devicon -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+</head>
+
+<body>
+
+    <nav id="navbar">
+
+        <div class="logo">
+            PORTFOLIO
+        </div>
+
+        <button id="theme-btn" class="theme-btn">
+        🌙
+        </button>
+
+    </nav> 
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <p>Hi there 👋</p>
+
+            <h1>I'm <span>Kiran Rohith</span></h1>
+
+            <h2>Python Developer</h2>
+
+            <p>
+
+                I build backend stuff, learn things as I go,
+                and enjoy making simple solutions that actually work.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contact" class="btn">Contact Me</a>
+
+                <a href="images/kiranrohith_T_resume.docx"
+                        download
+                class="btn-outline">
+
+                Download Resume
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <i class="fa-solid fa-laptop-code"></i>
+
+        </div>
+
+    </section>
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about-container">
+
+            <div class="about-image">
+
+                <img src="images/photo_2026-06-29_16-26-48(1).jpg" alt="Kiran Rohith portrait" class="about-photo">
+
+            </div>
+
+            <div class="about-content">
+
+                <h3>Who Am I?</h3>
+
+                <p>
+
+                    I'm Kiran Rohith, a Computer Science graduate who enjoys
+                    learning backend development using Python and FastAPI.
+
+                </p>
+
+                <p>
+
+                    I love building APIs, working with databases and
+                    continuously improving my programming skills.
+
+                </p>
+
+                <div class="about-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>kiranrohith246@gmail.com</span>
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>+91 9080628116</span>
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>Chennai, India</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="quote">
+
+    <h2>Random Quote</h2>
+
+    <div class="quote-box">
+
+        <p id="quote-text">
+            Click the button to load a quote.
+        </p>
+
+        <button id="quote-btn" class="btn">
+            Get Quote
+        </button>
+
+    </div>
+
+    </section>
+    <section id="skills">
+
+        <div class="section-header">
+            <h2>My Skills</h2>
+            <button id="add-skill-btn" class="add-btn">+</button>
+        </div>
+
+        <div class="skills-grid" id="skills-list"></div>
+
+    </section>
+
+    <!-- Add Skill Modal -->
+    <div id="skill-modal" class="skill-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Skill</h3>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <form id="add-skill-form">
+                <div class="form-group">
+                    <label for="skill-name">Skill Name <span class="required">*</span></label>
+                    <input type="text" id="skill-name" placeholder="e.g., React, MongoDB" required>
+                </div>
+                <div class="form-group">
+                    <label for="skill-icon">Icon Class (Optional)</label>
+                    <input type="text" id="skill-icon" placeholder="e.g., devicon-react-plain colored">
+                    <small>Leave blank for default icon</small>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Add Skill</button>
+                    <button type="button" id="cancel-btn" class="btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <section id="experience">
+
+        <h2>Experience</h2>
+
+        <div class="experience-card">
+
+            <div class="exp-icon">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+            </div>
+
+            <div class="exp-content">
+
+                <h3>Frontend Developer Intern</h3>
+
+                <h4>Light2Speed Pvt. Ltd.</h4>
+
+                <p>May 2023 - September 2023</p>
+
+                <ul>
+
+                    <li>Worked with a team of 5 developers to build user interfaces.</li>
+
+                    <li>Improved skills in React.js and Node.js.</li>
+
+                    <li>Developed a web application integrating social media platforms.</li>
+
+                    <li>Collaborated with teammates during the development process.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="projects-container">
+
+            <!-- Project 1 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+                <h3>Local Search Engine</h3>
+
+                <p>
+
+                    Developed the frontend for a Local Search Engine that
+                    searches PDFs, DOCX, EPUB and programming files using
+                    the TF-IDF algorithm.
+
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>Rust</span>
+
+                    <span>Frontend</span>
+
+                    <span>TF-IDF</span>
+
+                </div>
+
+            </div>
+
+            <!-- Project 2 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <h3>Blockchain Storage System</h3>
+
+                <p>
+
+                    Developed frontend and database modules for a
+                    Post-Quantum Decentralized Blockchain Storage System.
+
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>Rust</span>
+
+                    <span>Database</span>
+
+                    <span>Blockchain</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>Let's Connect!</h3>
+
+                <p>
+
+                    Feel free to reach out for opportunities,
+                    collaborations or just to say hello.
+
+                </p>
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>kiranrohith246@gmail.com</span>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>+91 9080628116</span>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    <span><a href="https://github.com/Kiranrohith">github.com/kiranrohith</a></span>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                    <span><a href="https://www.linkedin.com/in/kiran-rohith-t-34b8531b2/">linkedin.com/in/kiranrohith</a></span>
+
+                </div>
+
+            </div>
+
+            <form>
+
+                <input type="text" placeholder="Your Name">
+
+                <input type="email" placeholder="Your Email">
+
+                <input type="text" placeholder="Subject">
+
+                <textarea rows="6" placeholder="Your Message"></textarea>
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+
+            Made using HTML & CSS
+
+        </p>
+
+        <p>
+
+            © 2026 Kiran Rohith. All Rights Reserved.
+
+        </p>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
