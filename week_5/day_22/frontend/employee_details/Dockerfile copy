@@ -1,0 +1,20 @@
+#Parent image is added as baseimage
+FROM node:24-alpine AS builder
+
+#Create working directory
+WORKDIR /app
+
+#copy our dependencies list
+COPY package.json .
+
+#Installing the dependencies
+RUN npm install
+
+#Copying our project files
+COPY . .
+
+#Defining which port to use
+EXPOSE 5173
+
+#Running the react app
+CMD ["npm", "run", "dev", "--", "--host"]
