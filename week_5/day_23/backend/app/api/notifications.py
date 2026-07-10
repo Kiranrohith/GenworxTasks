@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Depends, status
-from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 
 from app.crud.notification_crud import create_notification, get_notification
@@ -7,8 +6,6 @@ from app.database import get_db
 from app.schemas.notifications_schemas import notification_create, notification_response
 from app.sse.sse_manager import broadcast_notification, stream
 from sse_starlette.sse import EventSourceResponse
-
-import asyncio
 
 noti_router = APIRouter(prefix="/notifications", tags=["notifications"])
 
