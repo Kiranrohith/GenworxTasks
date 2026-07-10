@@ -8,6 +8,7 @@ dependencies = [
     "alembic>=1.18.5",
     "fastapi[standard]>=0.139.0",
     "psycopg2-binary>=2.9.12",
+    "ruff>=0.15.21",
     "sqlalchemy>=2.0.51",
     "sse-starlette>=3.4.5",
 ]
