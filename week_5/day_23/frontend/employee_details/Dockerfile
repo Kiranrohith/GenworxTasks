@@ -1,43 +1,34 @@
 # -------------------------
 # Base Image
 # -------------------------
-FROM python:3.14-alpine3.23
+FROM node:24-alpine
 
 # -------------------------
-# Copy uv binary
-# -------------------------
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
-
-
-RUN apk add --no-cache postgresql-client
-# -------------------------
-# Set working directory
+# Working Directory
 # -------------------------
 WORKDIR /app
 
 # -------------------------
-# Copy dependency file
+# Copy package files
 # -------------------------
-COPY requirements.txt .
+COPY package*.json ./
 
 # -------------------------
 # Install dependencies
 # -------------------------
-RUN uv pip install --system --no-cache -r requirements.txt
+RUN npm install
 
 # -------------------------
-# Copy project files
+# Copy project
 # -------------------------
 COPY . .
 
-
-RUN chmod +x start.sh
 # -------------------------
-# Expose FastAPI port
+# Expose Vite port
 # -------------------------
-EXPOSE 8000
+EXPOSE 5173
 
 # -------------------------
-# Start FastAPI
+# Start React
 # -------------------------
-CMD ["sh","start.sh"]
+CMD ["npm", "run", "dev", "--", "--host"]
